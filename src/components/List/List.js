@@ -18,12 +18,12 @@ class List extends React.Component {
         <section className={styles.component}>
             <Hero titleText={this.props.title} imageSrc={this.props.imgSrc}/>
             <div className={styles.description}>
-            {this.props.children}
+                {this.props.children}
             </div>
             <div className={styles.columns}>
-                <Column titleOne="Animals" />
-                <Column titleTwo="Plants"/>
-                <Column titleThree="Minerals"/>
+                <Column columnText="Animals"/>
+                <Column columnText="Plants"/>
+                <Column columnText="Minerals"/>
             </div>
         </section>
         )
