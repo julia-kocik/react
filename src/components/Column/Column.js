@@ -14,7 +14,7 @@ class Column extends React.Component {
     name: PropTypes.string,
     title: PropTypes.string,
     icon: PropTypes.string,
-    cards: PropTypes.string,
+    cards: PropTypes.array,
   }
   addCard(title) {
     this.setState(state => (
