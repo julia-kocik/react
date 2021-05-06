@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from './Column.scss';
-import Card from "../Card/Card.js";
+import Card from '../Card/Card.js';
 import PropTypes from 'prop-types';
 import { settings } from '../../data/dataStore';
-import Creator from "../Creator/Creator.js";
-import Icon from "../Icon/Icon.js";
+import Creator from '../Creator/Creator.js';
+import Icon from '../Icon/Icon.js';
 
 class Column extends React.Component {
   state = {
@@ -13,7 +13,8 @@ class Column extends React.Component {
   static propTypes = {
     name: PropTypes.string,
     title: PropTypes.string,
-
+    icon: PropTypes.string,
+    cards: PropTypes.string,
   }
   addCard(title) {
     this.setState(state => (
@@ -22,10 +23,10 @@ class Column extends React.Component {
           ...state.cards,
           {
             key: state.cards.length ? state.cards[state.cards.length - 1].key + 1 : 0,
-            title
+            title,
 
-          }
-        ]
+          },
+        ],
       }
     ));
   }
@@ -46,7 +47,7 @@ class Column extends React.Component {
           <Creator text={settings.cardCreatorText} action={title => this.addCard(title)} />
         </div>
       </section>
-    )
+    );
   }
 }
 export default Column;
