@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Column.scss';
 import Card from '../Card/Card.js';
 import PropTypes from 'prop-types';
-import { settings } from '../../data/dataStore';
+import {settings} from '../../data/dataStore';
 import Creator from '../Creator/Creator.js';
 import Icon from '../Icon/Icon.js';
 import {Droppable} from 'react-beautiful-dnd';
