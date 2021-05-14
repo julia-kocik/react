@@ -108,6 +108,18 @@ const lists = [
     description: 'Interesting animals I want to see!',
     image: 'https://photoshop-kopona.com/uploads/posts/2019-02/1550660045_animals-2.jpg',
   },
+  {
+    id: 'list-4',
+    title: 'Plants  <sup>soon!</sup>',
+    description: 'Interesting plants I want to see!',
+    image: 'https://images.pexels.com/photos/4503273/pexels-photo-4503273.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+  },
+  {
+    id: 'list-5',
+    title: 'Fruits  <sup>soon!</sup>',
+    description: 'Interesting fruits I want to see!',
+    image: 'https://images.pexels.com/photos/2253316/pexels-photo-2253316.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+  },
 ];
 
 const columns = [
