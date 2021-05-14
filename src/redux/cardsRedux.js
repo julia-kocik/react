@@ -1,7 +1,17 @@
 import shortid from 'shortid';
 
 // selectors
-export const getCardsForColumn = ({cards, searchString}, columnId) => cards.filter(card => card.columnId == columnId && new RegExp(searchString, 'i').test(card.title));
+export const getCardsForColumn = ({cards, searchString}, columnId) => cards
+  .filter(card => card.columnId == columnId && new RegExp(searchString, 'i').test(card.title))
+  .sort((carda, cardb ) => {
+    if (carda.index > cardb.index)
+      return -1;
+    if (carda.index < cardb.index)
+      return 1;
+    // a równe b
+    return 0;
+  }
+  );
 
 
 // action name creator
