@@ -1,8 +1,8 @@
 import shortid from 'shortid';
 
 // selectors
-export const getCardsForColumn = ({cards, searchString}, columnId) => cards
-  .filter(card => card.columnId == columnId && new RegExp(searchString, 'i').test(card.title))
+export const getCardsForColumn = ({cards}, columnId) => cards
+  .filter(card => card.columnId == columnId)
   .sort((carda, cardb ) => {
     if (carda.index > cardb.index)
       return -1;
@@ -12,6 +12,8 @@ export const getCardsForColumn = ({cards, searchString}, columnId) => cards
     return 0;
   }
   );
+  
+export const getMatchingCards = ({cards, searchString}) => cards.filter(card => card.title.toLowerCase().includes(searchString.toLowerCase()));
 
 
 // action name creator
@@ -41,7 +43,6 @@ export default function reducer(statePart = [], action = {}) {
       if(dest.columnId == src.columnId){
         targetColumnCards.splice(src.index, 1);
         targetColumnCards.splice(dest.index, 0, targetCard);
-        console.log(targetColumnCards.map(card => `${card.index}, title: ${card.title}`));
 
         return statePart.map(card => {
           const targetColumnIndex = targetColumnCards.indexOf(card);
@@ -59,11 +60,6 @@ export default function reducer(statePart = [], action = {}) {
         sourceColumnCards.splice(src.index, 1);
         // add card to targetColumn
         targetColumnCards.splice(dest.index, 0, targetCard);
-
-        console.log('sourceColumnCards:');
-        console.log(sourceColumnCards.map(card => `${card.index}, title: ${card.title}`));
-        console.log('targetColumnCards:');
-        console.log(targetColumnCards.map(card => `${card.index}, title: ${card.title}`));
 
         return statePart.map(card => {
           const targetColumnIndex = targetColumnCards.indexOf(card);
