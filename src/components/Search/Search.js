@@ -53,7 +53,7 @@ class Search extends React.Component {
           <input
             type='text'
             placeholder={text}
-            value={value}
+            name={value}
             onChange={event => this.handleChange(event)}
           />
           <div className={styles.buttons}>

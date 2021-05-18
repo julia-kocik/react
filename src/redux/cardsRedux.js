@@ -1,19 +1,10 @@
 import shortid from 'shortid';
 
+
 // selectors
-export const getCardsForColumn = ({cards}, columnId) => cards
-  .filter(card => card.columnId == columnId)
-  .sort((carda, cardb ) => {
-    if (carda.index > cardb.index)
-      return -1;
-    if (carda.index < cardb.index)
-      return 1;
-    // a równe b
-    return 0;
-  }
-  );
+export const getCardsForColumn = ({cards}, columnId) => cards.filter(card => card.columnId == columnId);
   
-export const getMatchingCards = ({cards, searchString}) => cards.filter(card => card.title.toLowerCase().includes(searchString.toLowerCase()));
+export const getMatchingCards = ({cards}, searchString) => cards.filter(card => card.title.toLowerCase().includes(searchString.toLowerCase()));
 
 
 // action name creator
