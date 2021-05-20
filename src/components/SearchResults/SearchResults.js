@@ -16,7 +16,7 @@ class SearchResults extends React.Component {
         <section>
           <div className={styles.cards}>
             {cards.map(cardData => (
-              <Card key={cardData.id} {...cardData} />
+              <Card isDraggable={false} key={cardData.id} {...cardData} />
             ))}
           </div>
         </section>
