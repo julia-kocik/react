@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import Container from '../Container/Container';
 
 
+
 class SearchResults extends React.Component {
   static propTypes = {
     cards: PropTypes.array,
@@ -14,7 +15,7 @@ class SearchResults extends React.Component {
     return (
       <Container>
         <section>
-          <div className={styles.cards}>
+          <div className={styles.component}>
             {cards.map(cardData => (
               <Card isDraggable={false} key={cardData.id} {...cardData} />
             ))}
