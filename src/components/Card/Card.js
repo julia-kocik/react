@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Card.scss';
 import PropTypes from 'prop-types';
 import {Draggable} from 'react-beautiful-dnd';
+import Icon from '../Icon/Icon';
 
 class Card extends React.Component {
     static propTypes = {
@@ -9,12 +10,13 @@ class Card extends React.Component {
       id: PropTypes.string,
       index: PropTypes.number,
       isDraggable: PropTypes.bool,
+      action: PropTypes.func,
     }
     static defaultProps = {
       isDraggable: true,
     }
     render() {
-      const {title, id, index, isDraggable} = this.props;
+      const {title, id, index, isDraggable, action} = this.props;
       if(isDraggable) {
         return (
           <section>
@@ -27,6 +29,7 @@ class Card extends React.Component {
                   ref={provided.innerRef}
                 >
                   {title}
+                  <Icon name='trash' handleClick={action}/>
                 </article>
               )}
             </Draggable>

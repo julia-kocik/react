@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Column.scss';
-import Card from '../Card/Card.js';
+import Card from '../Card/Card';
 import PropTypes from 'prop-types';
 import {settings} from '../../data/dataStore';
 import Creator from '../Creator/Creator.js';
@@ -16,13 +16,14 @@ class Column extends React.Component {
     icon: PropTypes.string,
     cards: PropTypes.array,
     addCard: PropTypes.func,
+    removeCard: PropTypes.func,
     id: PropTypes.string,
   }
   static defaultProps = {
     icon: settings.defaultColumnIcon,
   }
   render() {
-    const {title, icon, cards, addCard, id} = this.props;
+    const {title, icon, cards, addCard, id, removeCard} = this.props;
     return (
       
       <section className={styles.component}>
@@ -40,9 +41,9 @@ class Column extends React.Component {
               {...provided.droppableProps}
               ref={provided.innerRef}
             >
-              {cards.map(cardData => (
-                <Card key={cardData.id} {...cardData} />
-              ))}
+              {cards.map(cardData => 
+                <Card key={cardData.id} {...cardData} action={() => removeCard(cardData.id)}/>
+              )}
 
               {provided.placeholder}
             </div>

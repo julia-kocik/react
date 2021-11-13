@@ -1,8 +1,8 @@
 import {connect} from 'react-redux';
 import Column from './Column';
-import {getCardsForColumn} from '../../redux/cardsRedux';
 import {createActionAddCard} from '../../redux/cardsRedux';
-
+import {getCardsForColumn} from '../../redux/cardsRedux';
+import {createActionRemoveCard} from '../../redux/cardsRedux';
 
 
 const mapStateToProps = (state, props) => ({
@@ -14,6 +14,7 @@ const mapDispatchToProps = (dispatch, props) => ({
     columnId: props.id,
     title,
   })),
+  removeCard: id => dispatch(createActionRemoveCard({id})),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Column);
