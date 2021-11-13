@@ -193,6 +193,7 @@ const initialStoreData = {
   lists: [...lists],
   columns: [...columns],
   cards: [...cards],
+  done: false,
 };
 
 export default initialStoreData;

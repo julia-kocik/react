@@ -17,6 +17,7 @@ export const ADD_CARD = createActionName('ADD_CARD');
 export const MOVE_CARD = createActionName('MOVE_CARD');
 export const REMOVE_CARD = createActionName('REMOVE_CARD');
 
+
 // action creators
 export const createActionAddCard = payload => ({payload: { ...payload, id: shortid.generate()}, type: ADD_CARD});
 export const createActionRemoveCard = payload => ({ payload: { ...payload }, type: REMOVE_CARD });
