@@ -16,8 +16,8 @@ export const settings = {
 };
 
 export const pageContents = {
-  title: 'My first React app',
-  subtitle: 'A simple to-do app, with lists, columns and cards',
+  title: 'TO DO APP',
+  subtitle: '',
 };
 
 export const searchContent = {
@@ -92,33 +92,21 @@ export const listData = {
 const lists = [
   {
     id: 'list-1',
-    title: 'Things to do <sup>soon!</sup>',
-    description: 'Interesting things I want to check out!',
-    image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+    title: 'Fun',
+    description: 'Things I want to do!',
+    image: 'https://images.pexels.com/photos/40815/youth-active-jump-happy-40815.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
   },
   {
     id: 'list-2',
-    title: 'Places to visit <sup>soon!</sup>',
-    description: 'Interesting places I want to check out!',
-    image: 'https://i.pinimg.com/originals/fc/de/94/fcde946d572f8968cde14b688527021b.png',
+    title: 'Shopping',
+    description: 'Thing I need to buy!',
+    image: 'https://cdn.pixabay.com/photo/2019/02/16/14/19/shopping-4000414_1280.jpg',
   },
   {
     id: 'list-3',
-    title: 'Animals  <sup>soon!</sup>',
-    description: 'Interesting animals I want to see!',
-    image: 'https://photoshop-kopona.com/uploads/posts/2019-02/1550660045_animals-2.jpg',
-  },
-  {
-    id: 'list-4',
-    title: 'Plants  <sup>soon!</sup>',
-    description: 'Interesting plants I want to see!',
-    image: 'https://images.pexels.com/photos/4503273/pexels-photo-4503273.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-  },
-  {
-    id: 'list-5',
-    title: 'Fruits  <sup>soon!</sup>',
-    description: 'Interesting fruits I want to see!',
-    image: 'https://images.pexels.com/photos/2253316/pexels-photo-2253316.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+    title: 'Job',
+    description: 'Things I need to do!',
+    image: 'https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
   },
 ];
 
@@ -144,8 +132,38 @@ const columns = [
   {
     id: 'column-4',
     listId: 'list-2',
-    title: 'Strange column',
-    icon: 'question',
+    title: 'Food',
+    icon: 'utensils',
+  },
+  {
+    id: 'column-5',
+    listId: 'list-2',
+    title: 'Drink',
+    icon: 'coffee',
+  },
+  {
+    id: 'column-6',
+    listId: 'list-2',
+    title: 'Cosmetics',
+    icon: 'bath',
+  },
+  {
+    id: 'column-7',
+    listId: 'list-3',
+    title: 'Coding',
+    icon: 'code',
+  },
+  {
+    id: 'column-8',
+    listId: 'list-3',
+    title: 'Business',
+    icon: 'business-time',
+  },
+  {
+    id: 'column-9',
+    listId: 'list-3',
+    title: 'Investment',
+    icon: 'wallet',
   },
 ];
 
