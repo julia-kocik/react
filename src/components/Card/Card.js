@@ -32,8 +32,10 @@ class Card extends React.Component {
                   ref={provided.innerRef}
                 >
                   {title}
-                  <Icon name='trash' handleClick={action}/>
-                  <Icon name='check-circle' handleClick={doneAction}/>
+                  <div className={styles.iconBox}>
+                    <Icon name='trash' handleClick={action}/>
+                    <Icon name='check-circle' handleClick={doneAction}/>
+                  </div>
                 </article>
               )}
             </Draggable>
