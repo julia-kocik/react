@@ -19,7 +19,7 @@ class Card extends React.Component {
       isDraggable: true,
     }
     render() {
-      const {title, id, index, isDraggable, action, doneAction, done} = this.props;
+      const {title, id, index, isDraggable, action, done, doneAction} = this.props;
       if(isDraggable) {
         return (
           <section>

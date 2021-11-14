@@ -155,36 +155,42 @@ const cards = [
     columnId: 'column-1',
     title: 'This Is Going to Hurt',
     index: 0,
+    done: false,
   },
   {
     id: 'card-2',
     columnId: 'column-1',
     title: 'Interpreter of Maladies',
     index: 1,
+    done: false,
   },
   {
     id: 'card-3',
     columnId: 'column-2',
     title: 'Harry Potter',
     index: 0,
+    done: false,
   },
   {
     id: 'card-4',
     columnId: 'column-2',
     title: 'Star Wars',
     index: 1,
+    done: false,
   },
   {
     id: 'card-5',
     columnId: 'column-3',
     title: 'The Witcher',
     index: 0,
+    done: false,
   },
   {
     id: 'card-6',
     columnId: 'column-3',
     title: 'Skyrim',
     index: 1,
+    done: false,
   },
 ];
 
@@ -193,7 +199,6 @@ const initialStoreData = {
   lists: [...lists],
   columns: [...columns],
   cards: [...cards],
-  done: false,
 };
 
 export default initialStoreData;

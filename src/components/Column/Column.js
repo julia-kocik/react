@@ -18,14 +18,14 @@ class Column extends React.Component {
     addCard: PropTypes.func,
     removeCard: PropTypes.func,
     id: PropTypes.string,
-    done: PropTypes.bool,
     markDone: PropTypes.func,
   }
   static defaultProps = {
     icon: settings.defaultColumnIcon,
   }
   render() {
-    const {title, icon, cards, addCard, id, removeCard, done, markDone} = this.props;
+    const {title, icon, cards, addCard, id, removeCard, markDone} = this.props;
+    console.log(cards);
     return (    
       <section className={styles.component}>
         <h3 className={styles.title}>
@@ -43,7 +43,7 @@ class Column extends React.Component {
               ref={provided.innerRef}
             >
               {cards.map(cardData => 
-                <Card key={cardData.id} {...cardData} action={() => removeCard(cardData.id)} done={done} doneAction={() => markDone()}/>
+                <Card key={cardData.id} {...cardData} action={() => removeCard(cardData.id)} doneAction={() => markDone(cardData.id)} />
               )}
 
               {provided.placeholder}

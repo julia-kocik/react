@@ -3,22 +3,21 @@ import Column from './Column';
 import {createActionAddCard} from '../../redux/cardsRedux';
 import {getCardsForColumn} from '../../redux/cardsRedux';
 import {createActionRemoveCard} from '../../redux/cardsRedux';
-import {getDone} from '../../redux/doneRedux';
-import {createActionMarkDone} from '../../redux/doneRedux';
+import { createActionMarkDone } from '../../redux/cardsRedux';
 
 
 const mapStateToProps = (state, props) => ({
   cards: getCardsForColumn(state, props.id),
-  done: getDone(state),
 });
 
 const mapDispatchToProps = (dispatch, props) => ({
   addCard: title => dispatch(createActionAddCard({
     columnId: props.id,
     title,
+    done: false,
   })),
   removeCard: id => dispatch(createActionRemoveCard({id})),
-  markDone: () => dispatch(createActionMarkDone()),
+  markDone: id => dispatch(createActionMarkDone({id})),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Column);
