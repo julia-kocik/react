@@ -1,11 +1,9 @@
 import shortid from 'shortid';
 
-
 // selectors
 export const getCards = (({cards}) => cards);
 export const getCardsForColumn = ({cards}, columnId) => cards.filter(card => card.columnId == columnId);
 export const getMatchingCards = ({cards}, searchString) => cards.filter(card => card.title.toLowerCase().includes(searchString.toLowerCase()));
-
 
 // action name creator
 const reducerName = 'cards';
@@ -22,7 +20,6 @@ export const createActionAddCard = payload => ({payload: { ...payload, id: short
 export const createActionRemoveCard = payload => ({ payload: { ...payload }, type: REMOVE_CARD });
 export const createAction_moveCard = payload => ({ payload: { ...payload }, type: MOVE_CARD });
 export const createActionMarkDone = payload => ({payload: {...payload}, type: MARK_DONE });
-
 
 // reducer
 export default function reducer(statePart = [], action = {}) {
